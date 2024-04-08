@@ -15,6 +15,7 @@ import org.bson.Document;
 public class SecurityPostgresApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(SecurityPostgresApplication.class, args);
 
 	}
