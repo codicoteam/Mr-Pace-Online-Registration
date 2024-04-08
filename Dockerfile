@@ -28,8 +28,5 @@ RUN echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mo
 RUN apt-get update && apt-get install -y \
     mongodb-org
 
-# Copy the MongoDB configuration file to the container (if necessary)
-# COPY mongodb.conf /etc/mongodb.conf
-
 # Start MongoDB service
-RUN service mongod start
+CMD ["mongod", "--fork", "--logpath", "/var/log/mongodb.log", "--bind_ip", "127.0.0.1"]
