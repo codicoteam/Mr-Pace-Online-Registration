@@ -15,7 +15,7 @@ FROM openjdk:17.0.1-jdk-slim
 WORKDIR /app
 
 # Copy the JAR file of your Spring Boot application to the container
-COPY --from=build /target/SecurityPostgres-0.0.1-SNAPSHOT.jar SecurityPostgres.jar
+COPY target/SecurityPostgres-0.0.1-SNAPSHOT.jar SecurityPostgres.jar
 
 # Expose the port on which your Spring Boot application runs
 EXPOSE 8080
